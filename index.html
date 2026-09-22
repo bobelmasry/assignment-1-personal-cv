@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The personal CV of Aly Youssef.">
+  <title>Aly Youssef | CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Aly Youssef home">AY<span>.</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="#profile">Profile</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="download-link" href="mailto:aly-hassan-youssef@aucegypt.edu">Let's talk <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Personal CV · 2026</p>
+          <h1 id="intro-title">Aly<br><em>Youssef</em></h1>
+          <p class="hero-title">Student &amp; Aspiring Developer</p>
+          <p class="hero-summary">Building useful tools to help others and make a positive impact.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#experience">Explore my work <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero-portrait">
+          <div class="portrait-frame">
+            <img src="my%20image.jpeg" alt="Portrait of Aly Youssef">
+          </div>
+          <div class="portrait-caption"><span>Based in</span><strong>Cairo, Egypt</strong></div>
+        </div>
+      </section>
+
+      <section class="profile section-rule" id="profile" aria-labelledby="profile-title">
+        <div class="section-label"> Profile</div>
+        <div class="profile-content">
+          <h2 id="profile-title">Curious, thoughtful,<br><em>and ready to learn.</em></h2>
+          <p class="profile-bio">I am Aly Youssef, a motivated student interested in technology, problem-solving, and creating practical tools that make a positive difference.</p>
+        </div>
+      </section>
+
+      <section class="education section-rule" id="education" aria-labelledby="education-title">
+        <div class="section-label"> Education</div>
+        <div class="education-content">
+          <div class="section-heading-row">
+            <h2 id="education-title">Academic<br><em>background</em></h2>
+          </div>
+          <article class="education-item">
+            <p class="timeline-date">2023 — Present</p>
+            <div>
+              <h3>University studies</h3>
+              <p class="timeline-place">The American University in Cairo</p>
+              <p>Computer Science major. Focusing on computer vision, ML and RL, with a strong foundation in algorithms and data structures.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="experience section-rule" id="experience" aria-labelledby="experience-title">
+        <div class="section-label"> Experience</div>
+        <div class="experience-content">
+          <div class="section-heading-row">
+            <h2 id="experience-title">Selected<br><em>experience</em></h2>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item">
+              <p class="timeline-date">August 2026 — September 2026</p>
+              <div>
+                <h3>Software Engineering Intern</h3>
+                <p class="timeline-place">Siemens EDA</p>
+                <p>Built comprehensive database performance benchmarks for an internal chip simulation tool, evaluating multiple storage solutions and identifying an approach projected to reduce query latency by over 90%.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">March 2026 - June 2026</p>
+              <div>
+                <h3>Research assistant</h3>
+                <p class="timeline-place">ASIC Hub at AUC</p>
+                <ul class="experience-points">
+                  <li>Developed an events system for organizing sessions with integrated presentation resources and timing.</li>
+                  <li>Created a forum with media uploads and reply threads to facilitate communication among members.</li>
+                  <li>Designed a project showcase to present ongoing work and improve visibility across the team.</li>
+                  <li>Engineered a notification system using PostgreSQL functions with mention-based email alerts and automated daily digests to improve user engagement.</li>
+                </ul>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">August 2022 — September 2025</p>
+              <div>
+                <h3>Founding Engineer</h3>
+                <p class="timeline-place">Teach Me GCSE</p>
+                <ul class="experience-points">
+                  <li>Developed a Python automation tool using Tkinter, PyPDF2, pdf2image, and PIL to split exam papers of up to 40 questions into individual JPEG files, reducing manual processing time by 95%.</li>
+                  <li>Built an AI-based question classifier using a Naive Bayes model with scikit-learn, trained on chapter-specific keywords and achieving 90% accuracy in automatic categorization.</li>
+                  <li>Designed and deployed a Next.js web platform where teachers can build dynamic worksheets exportable to PDF through a FastAPI Python API, while students solve questions interactively with progress tracking and AI-generated explanations using the Gemini API.</li>
+                  <li>Created a Python web-scraping pipeline using requests and BeautifulSoup to collect and download past papers automatically, integrating with AWS S3 for storage and versioning.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills section-rule" id="skills" aria-labelledby="skills-title">
+        <div class="section-label"> Skills</div>
+        <div class="skills-content">
+          <h2 id="skills-title">What I bring<br><em>to the table.</em></h2>
+          <div class="skill-list" role="list">
+            <span role="listitem">Programming</span>
+            <span role="listitem">Research</span>
+            <span role="listitem">Problem-solving</span>
+            <span role="listitem">Communication</span>
+            <span role="listitem">Teamwork</span>
+            <span role="listitem">Creative thinking</span>
+            <span role="listitem">Adaptability</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="achievements section-rule" id="achievements" aria-labelledby="achievements-title">
+        <div class="section-label"> Achievements</div>
+        <div class="achievements-content">
+          <h2 id="achievements-title">Always looking<br><em>for the next challenge.</em></h2>
+          <ul class="experience-points">
+            <li>Former Speedball National Record Holder in the Under-17 Mixed Relay.</li>
+            <li>Completed a 460 km cycling expedition around the Nile Delta in 4 days, one of the fastest known times for the route.</li>
+            <li>Completed certified parachuting training.</li>
+            <li>Designed and assembled a mostly working 8-bit computer on breadboards, implementing clock circuitry, an ALU, instruction decoding, registers, and RAM.</li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer" id="contact">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-line"></span> Contact information</p>
+        <h2>Let’s make<br><em>something happen.</em></h2>
+      </div>
+      <div class="footer-contact">
+        <a class="email-link" href="mailto:aly-hassan-youssef@aucegypt.edu">aly-hassan-youssef@aucegypt.edu <span aria-hidden="true">↗</span></a>
+        <p>Based in Cairo, Egypt.<br>Github: <a href="https://github.com/bobelmasry" target="_blank" rel="noopener noreferrer">bobelmasry</a></p>
+      </div>
+      <p class="copyright">© 2026 Aly Youssef</p>
+    </footer>
+  </div>
+</body>
+</html>
