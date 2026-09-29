@@ -20,6 +20,9 @@
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+        Dark mode
+      </button>
       <a class="download-link" href="mailto:aly-hassan-youssef@aucegypt.edu">Let's talk <span aria-hidden="true">↗</span></a>
     </header>
 
@@ -44,16 +47,16 @@
       </section>
 
       <section class="profile section-rule" id="profile" aria-labelledby="profile-title">
-        <div class="section-label"> Profile</div>
-        <div class="profile-content">
+        <div class="section-label"> Profile <button class="section-toggle" type="button" data-target="profile-content" aria-expanded="true" aria-controls="profile-content">Hide</button></div>
+        <div class="profile-content" id="profile-content">
           <h2 id="profile-title">Curious, thoughtful,<br><em>and ready to learn.</em></h2>
           <p class="profile-bio">I am Aly Youssef, a motivated student interested in technology, problem-solving, and creating practical tools that make a positive difference.</p>
         </div>
       </section>
 
       <section class="education section-rule" id="education" aria-labelledby="education-title">
-        <div class="section-label"> Education</div>
-        <div class="education-content">
+        <div class="section-label"> Education <button class="section-toggle" type="button" data-target="education-content" aria-expanded="true" aria-controls="education-content">Hide</button></div>
+        <div class="education-content" id="education-content">
           <div class="section-heading-row">
             <h2 id="education-title">Academic<br><em>background</em></h2>
           </div>
@@ -69,8 +72,8 @@
       </section>
 
       <section class="experience section-rule" id="experience" aria-labelledby="experience-title">
-        <div class="section-label"> Experience</div>
-        <div class="experience-content">
+        <div class="section-label"> Experience <button class="section-toggle" type="button" data-target="experience-content" aria-expanded="true" aria-controls="experience-content">Hide</button></div>
+        <div class="experience-content" id="experience-content">
           <div class="section-heading-row">
             <h2 id="experience-title">Selected<br><em>experience</em></h2>
           </div>
@@ -114,10 +117,20 @@
       </section>
 
       <section class="skills section-rule" id="skills" aria-labelledby="skills-title">
-        <div class="section-label"> Skills</div>
-        <div class="skills-content">
+        <div class="section-label"> Skills <button class="section-toggle" type="button" data-target="skills-content" aria-expanded="true" aria-controls="skills-content">Hide</button></div>
+        <div class="skills-content" id="skills-content">
           <h2 id="skills-title">What I bring<br><em>to the table.</em></h2>
-          <div class="skill-list" role="list">
+          <div class="skills-tools">
+            <form class="skill-form" id="skill-form">
+              <label for="new-skill">Add a skill</label>
+              <div class="skill-form-row">
+                <input id="new-skill" name="new-skill" type="text" placeholder="e.g. Python" maxlength="40">
+                <button class="button button-dark" type="submit">Add</button>
+              </div>
+              <p class="form-message" id="skill-message" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+          <div class="skill-list" id="skill-list" role="list">
             <span role="listitem">Programming</span>
             <span role="listitem">Research</span>
             <span role="listitem">Problem-solving</span>
@@ -130,8 +143,8 @@
       </section>
 
       <section class="achievements section-rule" id="achievements" aria-labelledby="achievements-title">
-        <div class="section-label"> Achievements</div>
-        <div class="achievements-content">
+        <div class="section-label"> Achievements <button class="section-toggle" type="button" data-target="achievements-content" aria-expanded="true" aria-controls="achievements-content">Hide</button></div>
+        <div class="achievements-content" id="achievements-content">
           <h2 id="achievements-title">Always looking<br><em>for the next challenge.</em></h2>
           <ul class="experience-points">
             <li>Former Speedball National Record Holder in the Under-17 Mixed Relay.</li>
@@ -156,5 +169,6 @@
       <p class="copyright">© 2026 Aly Youssef</p>
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
