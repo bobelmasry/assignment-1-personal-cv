@@ -480,6 +480,311 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
+/* Cairo weather */
+.weather-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+}
+
+.weather-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.weather-card p {
+  margin: 0;
+}
+
+.weather-temp {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.weather-temp span {
+  margin-left: 0.3rem;
+  color: var(--coral);
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.weather-extra,
+.weather-status {
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.weather-status.is-error {
+  color: var(--coral);
+}
+
+/* GitHub activity */
+.github-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.github-stats:empty {
+  display: none;
+}
+
+.github-stat {
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.github-stat strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.github-stat span {
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.activity-status {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.activity-status:empty {
+  display: none;
+}
+
+.activity-status.is-error {
+  color: var(--coral);
+}
+
+.retry-button {
+  margin-left: 0.4rem;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.heatmap-scroll {
+  --cell: 11px;
+  --gap: 3px;
+  overflow-x: auto;
+  padding-bottom: 0.4rem;
+}
+
+.heatmap-months,
+.heatmap {
+  display: grid;
+  grid-auto-columns: var(--cell);
+  gap: var(--gap);
+  width: max-content;
+}
+
+.heatmap-months {
+  grid-auto-flow: column;
+  margin-bottom: 0.4rem;
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 600;
+}
+
+.heatmap-months span {
+  grid-row: 1;
+  white-space: nowrap;
+}
+
+.heatmap {
+  grid-template-rows: repeat(7, var(--cell));
+  grid-auto-flow: column;
+}
+
+.heatmap-day,
+.heatmap-legend span {
+  width: var(--cell, 11px);
+  height: var(--cell, 11px);
+  border-radius: 2px;
+  background: var(--line);
+}
+
+.heatmap-day.is-empty {
+  visibility: hidden;
+}
+
+.heatmap-day:hover {
+  outline: 1px solid var(--ink);
+}
+
+span[data-level="1"] { background: rgba(230, 92, 61, 0.3); }
+span[data-level="2"] { background: rgba(230, 92, 61, 0.55); }
+span[data-level="3"] { background: rgba(230, 92, 61, 0.8); }
+span[data-level="4"] { background: var(--coral); }
+
+.heatmap-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.heatmap-footer.is-hidden {
+  display: none;
+}
+
+.heatmap-footer p {
+  margin: 0;
+}
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* Projects */
+.projects-note {
+  margin: -2.6rem 0 2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.filter-button {
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-button:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+}
+
+.filter-button[aria-pressed="true"] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.project-status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.project-status:empty {
+  display: none;
+}
+
+.project-status.is-error {
+  color: var(--coral);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+  border: 1px solid var(--line);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--coral);
+  transform: translateY(-3px);
+}
+
+.project-updated {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.project-card h3 {
+  margin: 0 0 0.6rem;
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-transform: capitalize;
+}
+
+.project-card h3 a:hover {
+  color: var(--coral);
+}
+
+.project-description {
+  flex: 1;
+  margin: 0 0 1.4rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.project-language {
+  color: var(--coral);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.load-more {
+  margin-top: 2rem;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
 /* Footer */
 .footer {
   position: relative;
@@ -570,6 +875,7 @@ body.dark-mode .footer .email-link {
   }
 
   .site-header {
+    flex-wrap: wrap;
     min-height: 72px;
   }
 
@@ -582,8 +888,30 @@ body.dark-mode .footer .email-link {
     display: none;
   }
 
+  /* Move the menu onto its own scrollable row instead of hiding it. */
   nav {
-    display: none;
+    order: 3;
+    width: 100%;
+    margin: 0;
+    padding: 0.9rem 0;
+    gap: 1.6rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .projects-note {
+    margin-top: -1.8rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heatmap-footer {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero {
